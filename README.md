@@ -102,3 +102,5 @@
     pidof Telegram         
 28. Как завершить процесс по pid ?
     kill pid
+29. Список wi-fi сетей и их уровень сигнала: sudo nmcli dev wifi list 
+30. Посмотреть логи в режиме реального времени: tail -f 100 /var/log/syslog    
