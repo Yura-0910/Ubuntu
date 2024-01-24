@@ -103,4 +103,9 @@
 28. Как завершить процесс по pid ?
     kill pid
 29. Список wi-fi сетей и их уровень сигнала: sudo nmcli dev wifi list 
-30. Посмотреть логи в режиме реального времени: tail -f 100 /var/log/syslog    
+30. Посмотреть логи в режиме реального времени: tail -f 100 /var/log/syslog
+31. Что-бы избавиться от проблемы "rtw_8821ce 0000:02:00.0: firmware failed to leave lps state"    
+    можно сдалать вот так:\
+    sudo sed -i 's/3/2/' /etc/NetworkManager/conf.d/*\
+    Взято вот отсюда: https://askubuntu.com/questions/1449227/rtw-8821ce-firmware-failed-to-leave-lps-state
+32.     
