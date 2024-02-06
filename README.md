@@ -108,4 +108,20 @@
     можно сдалать вот так:\
     sudo sed -i 's/3/2/' /etc/NetworkManager/conf.d/*\
     Взято вот отсюда: https://askubuntu.com/questions/1449227/rtw-8821ce-firmware-failed-to-leave-lps-state
-32.     
+32. Ошибка в логах: r8169 0000:01:00.0 eno1: Link is Down\
+    Попробовал исправить, как описано тут: https://askubuntu.com/questions/761027/ethernet-not-working-on-ubuntu-driver-r8169-link-down
+    ну, т.е выполнил:
+    
+    Установил драйвер r8168::\
+    sudo apt update\
+    sudo apt install r8168-dkms\
+    sudo reboot
+    
+    Добавил код:\
+    #MazurovYura block brocken module r8169\
+    blacklist r8169
+    
+    С помощью команды:\
+    "sudo nano /etc/modprobe.d/r8169.conf"
+    
+    "lsmod | grep r8168" - что драйвер не загружен.    
